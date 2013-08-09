@@ -13,7 +13,6 @@ AVF 1308
 		
     	<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.3.1.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDD353fOPh-KBUQ-2ekPCg75uxXRn0D9Tk&sensor=false"></script>
 		<script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
 		<meta name="description" content="AVF Demo App" />
     	<meta name="keywords" content="iOS, Android, Demo, Full Sail, AVF" />
@@ -28,24 +27,21 @@ AVF 1308
 	<section data-role="page" id="home">
 		<!-- Info Slide Out Panel -->	
 		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
-	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
                 <li><a href="http://www.eskatech.com">Work</a></li>
                 <li><a href="https://www.facebook.com/night1ife">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech"data-ajax="false">Twitter</a></li>
+                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
                 <li data-theme="b">GitHub</li>
                 <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
                 <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<div class="homeBut" >
-					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</div>
-	        </span>
+	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
@@ -53,15 +49,15 @@ AVF 1308
 			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
-		<div data-role="content">
+		<div id="displayLinks" data-role="content">
 			<div>
-				<ul data-role="listview" id="native" data-inset="true" data-divider-theme="b">
+				<ul data-role="listview" id="natFeat" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >iOS / Android Native Feature Demos</li>
-					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_camera_camera.md.html#Camera" id="camera" data-transition="none"><img src="img/camIcon.png"><h2>Camera</h2></a></li>
-					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_storage_storage.md.html#Storage" id="storage" data-transition="none"><img src="img/storageIcon.png"><h2>Storage</h2></a></li>
-					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_geolocation_geolocation.md.html#Geolocation" id="geo" data-transition="none"><img src="img/geoIcon.png"><h2>Geolocation</h2></a></li>
-					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_notification_notification.md.html#Notification" id="notifications" data-transition="none"><img src="img/notifIcon.png"><h2>Notifications</h2></a></li>
-					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_media_capture_capture.md.html#Capture" id="Capture" data-transition="none"><img src="img/photoIcon.png"><h2>Capture</h2></a></li>											
+					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+camera+api" id="camera" data-transition="none"><img src="img/camIcon.png"><h2>Camera</h2></a></li>
+					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+storage+api" id="storage" data-transition="none"><img src="img/storageIcon.png"><h2>Storage</h2></a></li>
+					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+geolocation+api" id="geo" data-transition="none"><img src="img/geoIcon.png"><h2>Geolocation</h2></a></li>
+					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+notification+api" id="notifications" data-transition="none"><img src="img/notifIcon.png"><h2>Notifications</h2></a></li>
+					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+capture+api" id="Capture" data-transition="none"><img src="img/photoIcon.png"><h2>Capture</h2></a></li>											
 				</ul>
 			</div>
 			
@@ -91,24 +87,21 @@ AVF 1308
 	<section data-role="page" id="weekOne" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
 		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
-	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
                 <li><a href="http://www.eskatech.com">Work</a></li>
                 <li><a href="https://www.facebook.com/night1ife">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech"data-ajax="false">Twitter</a></li>
+                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
                 <li data-theme="b">GitHub</li>
                 <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
                 <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<div class="homeBut" >
-					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</div>
-	        </span>
+	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
@@ -130,24 +123,21 @@ AVF 1308
 	<section data-role="page" id="weekTwo" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
 		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
-	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
                 <li><a href="http://www.eskatech.com">Work</a></li>
                 <li><a href="https://www.facebook.com/night1ife">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech"data-ajax="false">Twitter</a></li>
+                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
                 <li data-theme="b">GitHub</li>
                 <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
                 <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<div class="homeBut" >
-					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</div>
-	        </span>
+	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
@@ -169,24 +159,21 @@ AVF 1308
 	<section data-role="page" id="weekThree" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
 		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
-	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
                 <li><a href="http://www.eskatech.com">Work</a></li>
                 <li><a href="https://www.facebook.com/night1ife">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech"data-ajax="false">Twitter</a></li>
+                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
                 <li data-theme="b">GitHub</li>
                 <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
                 <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<div class="homeBut" >
-					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</div>
-	        </span>
+	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
