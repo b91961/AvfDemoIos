@@ -1,0 +1,75 @@
+/*
+
+	Jamal Moubarak
+	ASD 1306
+	
+*/
+
+html {
+	background-color: white;
+}
+#headerLogo {
+	text-align: center;
+}
+#cta {
+	text-align: center;
+	margin: 1.5em 0em -1em 0em;
+}
+tdh {
+	text-align: center;
+}
+.error {
+	text-align: center;
+}
+ul { 
+	float: left; 
+	width: 80% !important;
+}
+/* iPhone Horizontal -------------------*/ 
+@media all and (min-width: 480px){  
+ul { 
+	width: 100% !important; 
+	} 
+}       
+/* iPad Verticle -----------------------*/ 
+@media only screen and (min-width: 768px) {
+ul { 
+	width: 50% !important; 
+	} 
+}  
+/* iPad Horizontal ---------------------*/ 
+@media only screen and (min-width: 1024px) {     
+ul { 
+	width: 50% !important; 
+	} 
+}  
+/* Nexus 7 Horizontal ------------------*/ 
+@media only screen and (min-width: 1280px) {     
+ul { 
+	width: 33.3333333% !important; 
+	} 
+}  
+/* Laptop 1440 -------------------------*/ 
+@media only screen and (min-width: 1440px) {     
+ul { 
+	width: 33.3333333% !important; 
+	} 
+}  
+/* Monitor 1600 ------------------------*/ 
+@media only screen and (min-width: 1600px) {
+ul { 
+	width: 25% !important; 
+	} 
+}  
+/* Monitor 1920 ------------------------*/ 
+@media only screen and (min-width: 1920px) {     
+ul { 
+	width: 20% !important; 
+	} 
+}
+.ui-page .ui-content .ui-listview {
+    margin: 30px;
+    max-width: 450px;
+}​
+
+
