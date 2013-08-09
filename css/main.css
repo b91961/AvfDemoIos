@@ -15,43 +15,43 @@ ul {
 	float: left; 
 	width: 80% !important;
 }
-/* iPhone Horizontal -------------------*/ 
+/* iPhone Horizontal */ 
 @media all and (min-width: 480px){  
 ul { 
 	width: 100% !important; 
 	} 
 }       
-/* iPad Verticle -----------------------*/ 
+/* iPad Verticle */ 
 @media only screen and (min-width: 768px) {
 ul { 
 	width: 50% !important; 
 	} 
 }  
-/* iPad Horizontal ---------------------*/ 
+/* iPad Horizontal */ 
 @media only screen and (min-width: 1024px) {     
 ul { 
 	width: 50% !important; 
 	} 
 }  
-/* Nexus 7 Horizontal ------------------*/ 
+/* Nexus 7 Horizontal */ 
 @media only screen and (min-width: 1280px) {     
 ul { 
 	width: 33.3333333% !important; 
 	} 
 }  
-/* Laptop 1440 -------------------------*/ 
+/* Laptop 1440 */ 
 @media only screen and (min-width: 1440px) {     
 ul { 
 	width: 33.3333333% !important; 
 	} 
 }  
-/* Monitor 1600 ------------------------*/ 
+/* Monitor 1600 */ 
 @media only screen and (min-width: 1600px) {
 ul { 
 	width: 25% !important; 
 	} 
 }  
-/* Monitor 1920 ------------------------*/ 
+/* Monitor 1920 */ 
 @media only screen and (min-width: 1920px) {     
 ul { 
 	width: 20% !important; 

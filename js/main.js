@@ -6,7 +6,7 @@ $(document).ready(function(){
 	
 	// Home Page pageinit function.
 	$('#home').on('pageinit', function() {
-
+	
 	});
 	
 	// Week One Page pageinit function.
@@ -27,6 +27,15 @@ $(document).ready(function(){
 
 
 // All functions go below here.
+
+//	$('#facebook').click(function() {
+//          var ref = window.open('https://www.facebook.com/night1ife', '_system', 'location=yes');
+//           var myCallback = function(){alert(event.url); }
+//           ref.addEventListener('loadstart', myCallback);
+//           ref.removeEventListener('loadstart', myCallback);
+//           ref.addEventListener('exit', function() { alert(event.type); });
+//           
+//    });
 
 });
 

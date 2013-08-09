@@ -13,6 +13,7 @@ AVF 1308
 		
     	<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.3.1.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDD353fOPh-KBUQ-2ekPCg75uxXRn0D9Tk&sensor=false"></script>
 		<script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
 		<meta name="description" content="AVF Demo App" />
     	<meta name="keywords" content="iOS, Android, Demo, Full Sail, AVF" />
@@ -22,9 +23,11 @@ AVF 1308
 	</head>
 	
 <body>
+
+	<!-- Home Page -->
 	<section data-role="page" id="home">
-	
-		<inf data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<!-- Info Slide Out Panel -->	
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
 	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
@@ -39,53 +42,55 @@ AVF 1308
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<hmbtn class="homeBut" >
+				<div class="homeBut" >
 					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</hmbtn>
+				</div>
 	        </span>
-		</inf>
-
+		</div>
+		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
 			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<pbtn align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></pbtn>
+			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
-		
-		<cat data-role="content">
-			<nfd>
+		<!-- Page Content -->	
+		<div data-role="content">
+			<div>
 				<ul data-role="listview" id="native" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >iOS / Android Native Feature Demos</li>
-					<li data-icon="false"><a href="#" id="camera" data-transition="none"><img src="img/camIcon.png"><h2>Camera</h2></a></li>
-					<li data-icon="false"><a href="#" id="storage" data-transition="none"><img src="img/storageIcon.png"><h2>Storage</h2></a></li>
-					<li data-icon="false"><a href="#" id="geo" data-transition="none"><img src="img/geoIcon.png"><h2>Geolocation</h2></a></li>
-					<li data-icon="false"><a href="#" id="notifications" data-transition="none"><img src="img/notifIcon.png"><h2>Notifications</h2></a></li>
-					<li data-icon="false"><a href="#" id="Photos" data-transition="none"><img src="img/photoIcon.png"><h2>Photos</h2></a></li>											
+					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_camera_camera.md.html#Camera" id="camera" data-transition="none"><img src="img/camIcon.png"><h2>Camera</h2></a></li>
+					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_storage_storage.md.html#Storage" id="storage" data-transition="none"><img src="img/storageIcon.png"><h2>Storage</h2></a></li>
+					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_geolocation_geolocation.md.html#Geolocation" id="geo" data-transition="none"><img src="img/geoIcon.png"><h2>Geolocation</h2></a></li>
+					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_notification_notification.md.html#Notification" id="notifications" data-transition="none"><img src="img/notifIcon.png"><h2>Notifications</h2></a></li>
+					<li data-theme="c"><a href="http://docs.phonegap.com/en/3.0.0/cordova_media_capture_capture.md.html#Capture" id="Capture" data-transition="none"><img src="img/photoIcon.png"><h2>Capture</h2></a></li>											
 				</ul>
-			</nfd>
+			</div>
 			
-			<api>
+			<div>
 				<ul data-role="listview" id="apis" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >JSON-P Data APIs</li>
-					<li data-icon="false"><a href="#" id="cal" data-transition="none"><img src="img/calendarIcon.png"><h2>Google Calendar</h2></a></li>
-					<li data-icon="false"><a href="#" id="drive" data-transition="none"><img src="img/driveIcon.png"><h2>Google Drive</h2></a></li>
-					<li data-icon="false"><a href="#" id="map" data-transition="none"><img src="img/mapsIcon.png"><h2>Google Maps</h2></a></li>
+					<li data-theme="c"><a href="https://developers.google.com/google-apps/calendar/?csw=1" id="cal" data-transition="none"><img src="img/calendarIcon.png"><h2>Google Calendar</h2></a></li>
+					<li data-theme="c"><a href="https://developers.google.com/drive/" id="drive" data-transition="none"><img src="img/driveIcon.png"><h2>Google Drive</h2></a></li>
+					<li data-theme="c"><a href="https://developers.google.com/maps-engine/" id="map" data-transition="none"><img src="img/mapsIcon.png"><h2>Google Maps</h2></a></li>
 				</ul>
-			</api>
+			</div>
 			
-			<rsh>
+			<div>
 				<ul data-role="listview" id="research" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >Research</li>
 					<li data-theme="c"><a href="#weekOne" id="wkone" data-transition="none"><img src="img/researchIcon.png"><h2>Week One</h2></a></li>
 					<li data-theme="c"><a href="#weekTwo" id="wktwo" data-transition="none"><img src="img/researchIcon.png"><h2>Week Two</h2></a></li>
 					<li data-theme="c"><a href="#weekThree" id="wkthree" data-transition="none"><img src="img/researchIcon.png"><h2>Week Three</h2></a></li>
 				</ul>
-			</rsh>
-		</cat>
+			</div>
+		</div>
 
 	</section>
 	
+
+	<!-- Week One Resource Page -->	
 	<section data-role="page" id="weekOne" data-add-back-btn="true">
-
-		<inf data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<!-- Info Slide Out Panel -->
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
 	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
@@ -100,30 +105,31 @@ AVF 1308
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<hmbtn class="homeBut" >
+				<div class="homeBut" >
 					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</hmbtn>
+				</div>
 	        </span>
-		</inf>
-
+		</div>
+		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
 			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<pbtn align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></pbtn>
+			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
+		<!-- Page Content -->	
+		<div data-role="content">
 		
-		<wko data-role="content">
-		
-			<errr class="error">
+			<div class="error">
 				<img src="img/404error.png" alt="404 Error">
-			</errr>
+			</div>
 			
-		</wko>
+		</div>
 		
 	</section>
 	
+	<!-- Week Two Resource Page -->	
 	<section data-role="page" id="weekTwo" data-add-back-btn="true">
-
-		<inf data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<!-- Info Slide Out Panel -->
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
 	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
@@ -138,30 +144,31 @@ AVF 1308
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<hmbtn class="homeBut" >
+				<div class="homeBut" >
 					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</hmbtn>
+				</div>
 	        </span>
-		</inf>
-
+		</div>
+		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
 			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<pbtn align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></pbtn>
+			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
+		<!-- Page Content -->	
+		<div data-role="content">
 		
-		<wkt data-role="content">
-		
-			<errr class="error">
+			<div class="error">
 				<img src="img/404error.png" alt="404 Error">
-			</errr>
+			</div>
 			
-		</wkt>
+		</div>
 
 	</section>
 	
+	<!-- Week Three Resource Page -->	
 	<section data-role="page" id="weekThree" data-add-back-btn="true">
-
-		<inf data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<!-- Info Slide Out Panel -->
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
 	        <span data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
@@ -176,27 +183,28 @@ AVF 1308
                 <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
-				<hmbtn class="homeBut" >
+				<div class="homeBut" >
 					<button data-role="button" data-icon="home" data-iconpos="right" data-theme="b" value="Home" class="home">Home</button>
-				</hmbtn>
+				</div>
 	        </span>
-		</inf>
-
+		</div>
+		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
 			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<pbtn align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></pbtn>
+			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
+		<!-- Page Content -->	
+		<div data-role="content">
 		
-		<wkth data-role="content">
-		
-			<errr class="error">
+			<div class="error">
 				<img src="img/404error.png" alt="404 Error">
-			</errr>
+			</div>
 			
-		</wkth>
+		</div>
 
 	</section>
 	
+	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="jquery/jquery.mobile-1.3.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
