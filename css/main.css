@@ -61,3 +61,7 @@ ul {
     margin: 30px;
     max-width: 435px;
 }​
+.ui-page .ui-content .ui-panel{
+	width:100px;
+	color: red;
+}
