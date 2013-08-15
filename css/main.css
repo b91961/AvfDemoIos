@@ -11,49 +11,49 @@
 .error {
 	text-align: center;
 }
-ul { 
+#displayLinks ul { 
 	float: left; 
 	width: 80% !important;
 }
 /* iPhone Horizontal */ 
 @media all and (min-width: 480px){  
-ul { 
+#displayLinks ul { 
 	width: 100% !important; 
 	} 
 }       
 /* iPad Verticle */ 
 @media only screen and (min-width: 768px) {
-ul { 
+#displayLinks ul { 
 	width: 50% !important; 
 	} 
 }  
 /* iPad Horizontal */ 
 @media only screen and (min-width: 1024px) {     
-ul { 
+#displayLinks ul { 
 	width: 50% !important; 
 	} 
 }  
 /* Nexus 7 Horizontal */ 
 @media only screen and (min-width: 1280px) {     
-ul { 
+#displayLinks ul { 
 	width: 33.3333333% !important; 
 	} 
 }  
 /* Laptop 1440 */ 
 @media only screen and (min-width: 1440px) {     
-ul { 
+#displayLinks ul { 
 	width: 33.3333333% !important; 
 	} 
 }  
 /* Monitor 1600 */ 
 @media only screen and (min-width: 1600px) {
-ul { 
+#displayLinks ul { 
 	width: 25% !important; 
 	} 
 }  
 /* Monitor 1920 */ 
 @media only screen and (min-width: 1920px) {     
-ul { 
+#displayLinks ul { 
 	width: 20% !important; 
 	} 
 }
@@ -61,7 +61,15 @@ ul {
     margin: 30px;
     max-width: 435px;
 }​
-.ui-page .ui-content .ui-panel{
-	width:100px;
-	color: red;
+#insta {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#insta li {
+	list-style: none;
+	float: left;
+	margin: 0 20px 20px 0;
+	-moz-box-shadow: 3px 3px 6px black;
+    -webkit-box-shadow: 3px 3px 6px black;
 }
