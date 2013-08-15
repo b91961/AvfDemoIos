@@ -73,3 +73,13 @@
 	-moz-box-shadow: 3px 3px 6px black;
     -webkit-box-shadow: 3px 3px 6px black;
 }
+#faceboo {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#faceboo li {
+	list-style: none;
+	float: left;
+	margin: 0 20px 20px 0;
+}
