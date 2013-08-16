@@ -80,6 +80,40 @@
 }
 #faceboo li {
 	list-style: none;
-	float: left;
+	float: ;
 	margin: 0 20px 20px 0;
+	background-color: ;
+}
+#textStory {
+	background-color: rgba(76,132,236,0.93);
+	max-width: 300px;
+	color: white;
+	text-align: center;
+	-moz-border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    height: 50px;
+
+}
+#pictureStory {
+	list-style: none;
+	float: none;
+	margin: 0 20px 20px 0px;
+    max-width: 130px;
+    padding: 10px;
+
+}
+#posts {
+	-moz-box-shadow: 3px 3px 6px black;
+    -webkit-box-shadow: 3px 3px 6px black;
+    width: 300px;
+    height: 300px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    float: left;
+    margin: 15px;
+}
+#fbPic {
+	max-height: 200px;
+	max-width: 250px;
+	position: center;
 }
