@@ -97,7 +97,7 @@ function onDeviceReady() {
 		$.mobile.changePage("#facebookp", {});
 		$('#faceboo').empty();
 		$.ajax({
-			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAHFE2EonKCV7vXS7HQ5mgFHodmkYtWKNGFR40ZAtrFgZBrsx6SD6ZAsz87ZCrMTiDqx3Mktg1bYn6bM9Q1qFztRxZC1GzlSQPuUUNivBKTRVKM8MQGZBDmA62raZBAEq9ZBV9Xhi2lql1DCh2lxEG2nolHXY4PXpZC4nfRtUYYcEoGbvda1icx0wZD",
+			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAMrhubmElYhlNfEQAIrh12J7Bs0sOWR1a5ZB72gMUCFV4mOj1REcOAvjZAJ0o28R3uvL9y4MoVonPcOZCYh4F6ErJlpJou4FfXPCbqO6WktSoZC53A7yvxQ7dqOnyPbH6A5Eufn5wFJXWCwMwidR58Qt6ZAdLgnDnIuqjZC5M4UsbmZAL1AGTsZD",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(stream) {
