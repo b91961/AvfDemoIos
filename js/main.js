@@ -120,31 +120,103 @@ function onDeviceReady() {
 		window.location.reload();
 		return false;*/
 	});
+	// Camera Page
+	var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URL, saveToPhotoAlbum: true });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL, saveToPhotoAlbum: true });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
 	
+	var canvas2ImagePlugin = window.plugins.canvas2ImagePlugin;
+    canvas2ImagePlugin.saveImageDataToLibrary(
+        function(msg){
+            console.log(msg);
+        }, 
+        function(err){
+            console.log(err);
+        }, 
+        'myCanvas'
+    );
 
-	$('#facebook').on('click', function() {
-    	var ref = window.open('https://www.facebook.com/night1ife', '_blank', 'location=yes');
-    	var myCallback = function(){
-        	alert(event.url); 
-        };
-        ref.addEventListener('loadstart', myCallback);
-        ref.removeEventListener('loadstart', myCallback);
-        ref.addEventListener('exit', function() { 
-        	alert(event.type); 
-        });
-        setTimeout(function() {
-        	ref.close();
-        }, 10000);   
-    });
-
-
-// Wait for device API libraries to load.
-document.addEventListener("deviceready", onDeviceReady, false);
-$("#nav-camera").on("click", camera);
-$("#nav-storage").on("click", storage);
-$("#nav-geolocation").on("click", geolocation);
-$("#nav-notifications").on("click", notifications);
-$("#nav-capture").on("click", capture);
 
 
 
