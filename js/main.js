@@ -53,23 +53,6 @@ function onDeviceReady() {
 }
 // All functions go below here.
 	
-	var camera = function() {
-			
-	};
-	var storage = function() {
-			
-	};
-	var geolocation = function() {
-		
-	};
-	var notifications = function() {
-		
-	};
-	var capture = function() {
-		
-	};
-	
-
 	$('#instagram').on('click', function() {
 		$.mobile.changePage("#instagramp", {});
 		$('#insta').empty();
@@ -82,7 +65,7 @@ function onDeviceReady() {
 				console.log(photos.data);
 				$.each(photos.data, function(i, val) {
 					var makeLi = $("<li></li>").appendTo('#insta'),
-							 a = $("<a/>", {"href": val.link, "target": "_blank"}).appendTo(makeLi),
+							 a = $("<a/>", {"href": val.link, "target": "_blank" }).appendTo(makeLi),
 						   img = $("<img/>", {"src": val.images.thumbnail.url}).appendTo(a);
 						   
 					if (val.caption){
@@ -120,102 +103,46 @@ function onDeviceReady() {
 		window.location.reload();
 		return false;*/
 	});
+	
 	// Camera Page
-	var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value
-
-    // Wait for device API libraries to load
-    //
+	var pictureSource;   
+    var destinationType; 
     document.addEventListener("deviceready",onDeviceReady,false);
-
-    // device APIs are available
-    //
     function onDeviceReady() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
     }
-
-    // Called when a photo is successfully retrieved
-    //
     function onPhotoDataSuccess(imageData) {
-      // Uncomment to view the base64-encoded image data
-      // console.log(imageData);
-
-      // Get image handle
-      //
+      console.log(imageData);
       var smallImage = document.getElementById('smallImage');
-
-      // Unhide image elements
-      //
       smallImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
       smallImage.src = "data:image/jpeg;base64," + imageData;
     }
-
-    // Called when a photo is successfully retrieved
-    //
     function onPhotoURISuccess(imageURI) {
-      // Uncomment to view the image file URI
-      // console.log(imageURI);
-
-      // Get image handle
-      //
+      console.log(imageURI);
       var largeImage = document.getElementById('largeImage');
-
-      // Unhide image elements
-      //
       largeImage.style.display = 'block';
-
-      // Show the captured photo
-      // The inline CSS rules are used to resize the image
-      //
       largeImage.src = imageURI;
     }
-
-    // A button will call this function
-    //
+    // Take Photo.
     function capturePhoto() {
-      // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-        destinationType: destinationType.FILE_URL, saveToPhotoAlbum: true });
-    }
-
-    // A button will call this function
-    //
-    function capturePhotoEdit() {
-      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
         destinationType: destinationType.DATA_URL, saveToPhotoAlbum: true });
     }
-
-    // A button will call this function
-    //
+    // Take Photo and minor edit.
+    function capturePhotoEdit() {
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, allowEdit: true,
+        destinationType: destinationType.DATA_URL, saveToPhotoAlbum: true });
+    }
+    // Retrieve photo from specific source.
     function getPhoto(source) {
-      // Retrieve image file location from specified source
       navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
         destinationType: destinationType.DATA_URI,
         sourceType: source });
     }
-
-    // Called if something bad happens.
-    //
     function onFail(message) {
-      alert('Failed because: ' + message);
+      alert('There is ' + message);
     }
-	
-	var canvas2ImagePlugin = window.plugins.canvas2ImagePlugin;
-    canvas2ImagePlugin.saveImageDataToLibrary(
-        function(msg){
-            console.log(msg);
-        }, 
-        function(err){
-            console.log(err);
-        }, 
-        'myCanvas'
-    );
 
 
 
