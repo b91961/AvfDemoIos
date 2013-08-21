@@ -104,7 +104,7 @@ function onDeviceReady() {
 		return false;*/
 	});
 	
-	// Camera Page
+	// Camera Functions
 	var pictureSource;   
     var destinationType; 
     document.addEventListener("deviceready",onDeviceReady,false);
@@ -144,6 +144,31 @@ function onDeviceReady() {
       alert('There is ' + message);
     }
 
+
+    // Geolocation Function
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = '<ul data-role="listview" id="geolocfeat" data-inset="true" data-divider-theme="b">' + 
+        					'<li data-role="list-divider" >Geolocation</li>' +
+        					'<li data-theme="c">' + 'Latitude: '           + position.coords.latitude              + '</li>' +
+                            '<li data-theme="c">' + 'Longitude: '          + position.coords.longitude             + '</li>' +
+                            '<li data-theme="c">' + 'Altitude: '           + position.coords.altitude              + '</li>' +
+                            '<li data-theme="c">' + 'Accuracy: '           + position.coords.accuracy              + '</li>' +
+                            '<li data-theme="c">' + 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '</li>' +
+                            '<li data-theme="c">' + 'Heading: '            + position.coords.heading               + '</li>' +
+                            '<li data-theme="c">' + 'Speed: '              + position.coords.speed                 + '</li>' +
+                            '<li data-theme="c">' + 'Timestamp: '          + position.timestamp                    + '</li>' + '</ul>';
+    }
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+                                                  [geolocationError],
+                                                  [geolocationOptions]);
 
 
 
