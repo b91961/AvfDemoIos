@@ -26,48 +26,48 @@ AVF 1308
 	<!-- Home Page -->
 	<section data-role="page" id="home">
 		<!-- Info Slide Out Panel -->	
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
-	        <ul data-role="listview" id="panelLi" data-theme="c" class="nav" data-inset="true">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="homepanel">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#homepanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div id="displayLinks" data-role="content">
 			<div>
 				<ul data-role="listview" id="natFeat" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >iOS / Android Native Feature Demos</li>
-					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+camera+api" id="camera" data-transition="none"><img src="img/camIcon.png" alt="Camera"><h2>Camera</h2></a></li>
-					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+storage+api" id="storage" data-transition="none"><img src="img/storageIcon.png" alt="Storage"><h2>Storage</h2></a></li>
-					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+geolocation+api" id="geo" data-transition="none"><img src="img/geoIcon.png" alt="Geolocation"><h2>Geolocation</h2></a></li>
-					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+notification+api" id="notifications" data-transition="none"><img src="img/notifIcon.png" alt="Notifications"><h2>Notifications</h2></a></li>
-					<li data-theme="c"><a href="http://lmgtfy.com/?q=Phonegap+capture+api" id="Capture" data-transition="none"><img src="img/photoIcon.png" alt="Capture"><h2>Capture</h2></a></li>											
+					<li data-theme="c"><a href="#camPage" id="camera" data-transition="none"><img src="img/camIcon.png" alt="Camera"><h2>Camera</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+storage+api','_blank','location=yes')" id="storage" data-transition="none"><img src="img/storageIcon.png" alt="Storage"><h2>Storage</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+geolocation+api','_blank','location=yes')" id="geo" data-transition="none"><img src="img/geoIcon.png" alt="Geolocation"><h2>Geolocation</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+notification+api','_blank','location=yes')" id="notifications" data-transition="none"><img src="img/notifIcon.png" alt="Notifications"><h2>Notifications</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+capture+api','_blank','location=yes')" id="Capture" data-transition="none"><img src="img/photoIcon.png" alt="Capture"><h2>Capture</h2></a></li>											
 				</ul>
 			</div>
 			
 			<div>
 				<ul data-role="listview" id="apis" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >JSON-P Data APIs</li>
-					<li data-theme="c"><a href="https://developers.google.com/google-apps/calendar/?csw=1" id="cal" data-transition="none"><img src="img/calendarIcon.png" alt="Calendar"><h2>Google Calendar</h2></a></li>
-					<li data-theme="c"><a href="https://developers.google.com/drive/" id="drive" data-transition="none"><img src="img/driveIcon.png" alt="Drive"><h2>Google Drive</h2></a></li>
-					<li data-theme="c"><a href="https://developers.google.com/maps-engine/" id="map" data-transition="none"><img src="img/mapsIcon.png" alt="Maps"><h2>Google Maps</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('https://developers.google.com/google-apps/calendar/?csw=1','_blank','location=yes')" id="cal" data-transition="none"><img src="img/calendarIcon.png" alt="Calendar"><h2>Google Calendar</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('https://developers.google.com/drive/','_blank','location=yes')" id="drive" data-transition="none"><img src="img/driveIcon.png" alt="Drive"><h2>Google Drive</h2></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('https://developers.google.com/maps-engine/','_blank','location=yes')" id="map" data-transition="none"><img src="img/mapsIcon.png" alt="Maps"><h2>Google Maps</h2></a></li>
 				</ul>
 			</div>
 			
@@ -81,15 +81,15 @@ AVF 1308
 			</div>
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-id="home">
+		<footer data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 		    	<ul>
 		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
+		            <li><a href="#homepanel" data-icon="info">Info</a></li>
 		            <li><a href="#social" data-icon="check">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
@@ -97,28 +97,28 @@ AVF 1308
 	<!-- Week One Resource Page -->	
 	<section data-role="page" id="weekOne" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="wkonepanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#wkonepanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -136,43 +136,43 @@ AVF 1308
 				
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#wkonepanel" data-icon="info">Info</a></li>
 		            <li><a href="#social" data-icon="check">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 		
 	</section>
 	
 	<!-- Week Two Resource Page -->	
 	<section data-role="page" id="weekTwo" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="wktwopanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#wktwopanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -188,43 +188,43 @@ AVF 1308
 				
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#wktwopanel" data-icon="info">Info</a></li>
 		            <li><a href="#social" data-icon="check">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
 	<!-- Week Three Resource Page -->	
 	<section data-role="page" id="weekThree" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="wkthreepanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#wkthreepanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -235,43 +235,43 @@ AVF 1308
 			
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed">
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#wkthreepanel" data-icon="info">Info</a></li>
 		            <li><a href="#social" data-icon="check">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
 	<!-- Social Page -->	
 	<section data-role="page" id="social" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="socialpanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#socialpanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -287,43 +287,43 @@ AVF 1308
 			
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-id="social">
+		<footer data-role="footer" data-position="fixed" data-id="social">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
-		            <li><a href="#social" data-icon="check">Social</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#socialpanel" data-icon="info">Info</a></li>
+		            <li><a href="#social" data-icon="check" class="ui-btn-active">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
 		<!-- Instagram Page -->	
 	<section data-role="page" id="instagramp" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="instapanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#instapanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -335,43 +335,43 @@ AVF 1308
 			
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-id="social">
+		<footer data-role="footer" data-position="fixed" data-id="social">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
-		            <li><a href="#social" data-icon="check">Social</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#instapanel" data-icon="info">Info</a></li>
+		            <li><a href="#social" data-icon="check" class="ui-btn-active">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
 		<!-- Facebook Page -->	
 	<section data-role="page" id="facebookp" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="fbpanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#fbpanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -383,43 +383,43 @@ AVF 1308
 			
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-id="social">
+		<footer data-role="footer" data-position="fixed" data-id="social">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
-		            <li><a href="#social" data-icon="check">Social</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#fbpanel" data-icon="info">Info</a></li>
+		            <li><a href="#social" data-icon="check" class="ui-btn-active">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	
 	<!-- Twitter Page -->	
 	<section data-role="page" id="twitterp" data-add-back-btn="true">
 		<!-- Info Slide Out Panel -->
-		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="panel">
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="twittpanel">
 	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
 	        	<li data-theme="b">INFO</li>
 	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
             	<li data-theme="b">Contact Info</li>
                 <li data-icon="false">Jamal Moubarak</li>
-                <li><a href="http://www.eskatech.com">Work</a></li>
-                <li><a href="#" id="facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/JamalEskatech" data-ajax="false">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jamalm7">Instagram</a></li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
                 <li data-theme="b">GitHub</li>
-                <li><a href="http://b91961.github.io/AvfDemoAndroid">Git Pages - Android</a></li>
-                <li><a href="http://b91961.github.io/AvfDemoIos">Git Pages - iOS</a></li>
-                <li><a href="https://github.com/b91961/AVF">Git Repo</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
                 <li data-theme="b">Course</li>
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
 		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
-			<div id="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
-			<div align="right"><a href="#panel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#twittpanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
 		<div data-role="content">
@@ -444,15 +444,65 @@ AVF 1308
 			
 		</div>
 		<!-- Footer -->
-		<div data-role="footer" data-position="fixed" data-id="social">
+		<footer data-role="footer" data-position="fixed" data-id="social">
 			<div data-role="navbar">
 		    	<ul>
-		        	<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-		            <li><a href="#panel" data-icon="info">Info</a></li>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#twittpanel" data-icon="info">Info</a></li>
+		            <li><a href="#social" data-icon="check" class="ui-btn-active">Social</a></li>
+		        </ul>
+	        </div>
+	    </footer>
+
+	</section>
+	
+	<!-- Camera Page -->	
+	<section data-role="page" id="camPage" data-add-back-btn="true">
+		<!-- Info Slide Out Panel -->
+		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="campanel">
+	        <ul data-role="listview" data-theme="c" class="nav" data-inset="true">
+	        	<li data-theme="b">INFO</li>
+	            <li data-icon="minus"><a href="#" data-rel="close">Close menu</a></li>
+            	<li data-theme="b">Contact Info</li>
+                <li data-icon="false">Jamal Moubarak</li>
+                <li><a href="#" onclick="window.open('http://www.eskatech.com','_blank','location=yes')">Work</a></li>
+                <li><a href="#" onclick="window.open('https://www.facebook.com/night1ife','_blank','location=yes')">FaceBook</a></li>
+                <li><a href="#" onclick="window.open('https://twitter.com/JamalEskatech','_blank','location=yes')">Twitter</a></li>
+                <li><a href="#" onclick="window.open('https://www.instagram.com/jamalm7','_blank','location=yes')">Instagram</a></li>
+                <li data-theme="b">GitHub</li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoAndroid','_blank','location=yes')">Git Pages - Android</a></li>
+                <li><a href="#" onclick="window.open('http://b91961.github.io/AvfDemoIos','_blank','location=yes')">Git Pages - iOS</a></li>
+                <li><a href="#" onclick="window.open('https://github.com/b91961/AVF','_blank','location=yes')">Git Repo</a></li>
+                <li data-theme="b">Course</li>
+                <li data-icon="false">AVF1308</li>
+	        </ul>
+		</div>
+		<!-- Header -->
+		<header data-role="header" data-position="fixed" >
+			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
+			<div class="infobtn"><a href="#campanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
+		</header>
+		<!-- Page Content -->	
+		<div data-role="content">
+			
+			<button onclick="capturePhoto();">Capture Photo</button> <br>
+		    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+		    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+		    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+		    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" alt="Image"/>
+		    <img style="display:none;" id="largeImage" src="" alt="Image"/>
+			
+		</div>
+		<!-- Footer -->
+		<footer data-role="footer" data-position="fixed" data-id="social">
+			<div data-role="navbar">
+		    	<ul>
+		        	<li><a href="#home" data-icon="home">Home</a></li>
+		            <li><a href="#campanel" data-icon="info">Info</a></li>
 		            <li><a href="#social" data-icon="check">Social</a></li>
 		        </ul>
 	        </div>
-	    </div>
+	    </footer>
 
 	</section>
 	

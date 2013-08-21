@@ -5,8 +5,11 @@
 	
 */
 
-#headerLogo {
+.headerLogo {
 	text-align: center;
+}
+.infobtn{
+	text-align: right;
 }
 .error {
 	text-align: center;
