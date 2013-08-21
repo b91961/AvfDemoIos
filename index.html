@@ -483,16 +483,23 @@ AVF 1308
 			<div class="infobtn"><a href="#campanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
 		<!-- Page Content -->	
-		<div data-role="content">
-			
-			<button onclick="capturePhoto();">Capture Photo</button> <br>
-		    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-		    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-		    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-		    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" alt="Image"/>
-		    <img style="display:none;" id="largeImage" src="" alt="Image"/>
-			
+		<div data-role="content">			
+			<div id="camNav">
+				<ul data-role="listview" id="cambutts" data-inset="true" data-divider-theme="b">
+					<li data-role="list-divider" >Take Photos</li>
+					<li data-theme="c"><a href="#" onclick="capturePhoto();">Capture Photo</a></li>
+					<li data-theme="c"><a href="#" onclick="capturePhotoEdit();">Capture Editable Photo</a></li>
+					<li data-role="list-divider" >Retrieve Photos</li>
+					<li data-theme="c"><a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</a></li>
+					<li data-theme="c"><a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</a></li>									
+				</ul>
+				<img style="display:none;width:60px;height:60px;" id="smallImage" src="" alt="Image"/>
+			    <img style="display:none;" id="largeImage" src="" alt="Image"/>	
+			</div>		
 		</div>
+		
+		
+		
 		<!-- Footer -->
 		<footer data-role="footer" data-position="fixed" data-id="social">
 			<div data-role="navbar">
