@@ -4,6 +4,10 @@
 // Device APIs are available
 function onDeviceReady() {
 
+	navigator.splashscreen.show();
+	pictureSource=navigator.camera.PictureSourceType;
+    destinationType=navigator.camera.DestinationType;
+
 	// Home Page pageinit function.
 	$('#home').on('pageinit', function() {
 	
@@ -34,24 +38,14 @@ function onDeviceReady() {
 	});	
 	// Twitter Page pageinit function.
 	$('#twitterp').on('pageinit', function() {
-	
-		function externalLinks() {
-			if (!document.getElementsByTagName) return;
-			var anchors = document.getElementsByTagName("a");
-			for (var i=0; i<anchors.length; i++) {
-				var anchor = anchors[i];
-				if (anchor.getAttribute("href") &&
-					anchor.getAttribute("rel") == "external")
-				anchor.target = "_blank";
-			}
-		}
-		window.onload = function() {
-			externalLinks();
-		};
 
 	});
 }
 // All functions go below here.
+
+	setTimeout(function() {
+        navigator.splashscreen.hide();
+    }, 5000);
 	
 	$('#instagram').on('click', function() {
 		$.mobile.changePage("#instagramp", {});
@@ -108,21 +102,20 @@ function onDeviceReady() {
 	var pictureSource;   
     var destinationType; 
     document.addEventListener("deviceready",onDeviceReady,false);
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }
     function onPhotoDataSuccess(imageData) {
       console.log(imageData);
-      var smallImage = document.getElementById('smallImage');
+      var smallImage = $('#smallImage');
       smallImage.style.display = 'block';
       smallImage.src = "data:image/jpeg;base64," + imageData;
     }
     function onPhotoURISuccess(imageURI) {
       console.log(imageURI);
-      var largeImage = document.getElementById('largeImage');
+      var largeImage = $('#largeImage');
       largeImage.style.display = 'block';
       largeImage.src = imageURI;
+    }
+    function onFail(message) {
+      alert('There is ' + message);
     }
     // Take Photo.
     function capturePhoto() {
@@ -140,17 +133,23 @@ function onDeviceReady() {
         destinationType: destinationType.DATA_URI,
         sourceType: source });
     }
-    function onFail(message) {
-      alert('There is ' + message);
-    }
-
-
+    
+/*    var dCord = device.cordova;
+		var dPlat = device.platform;
+		var du = device.uuid;
+		var dMod = device.model;
+		var dVer = device.version;
+		$('#devInfo').html( 'Device Cordova: '  + dCord + '<br>' + 
+							'Device Platform: ' + dPlat + '<br>' + 
+							'Device UUID: '     + du + '<br>' + 
+							'Device Model: '    + dMod + '<br>' + 
+							'Device Version: '  + dVer + '<br>' + 
+							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
+	});*/
+    
     // Geolocation Function
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
+/*    function onSuccess(position) {
+        var element = $('#geolocation');
         element.innerHTML = '<ul data-role="listview" id="geolocfeat" data-inset="true" data-divider-theme="b">' + 
         					'<li data-role="list-divider" >Geolocation</li>' +
         					'<li data-theme="c">' + 'Latitude: '           + position.coords.latitude              + '</li>' +
@@ -166,9 +165,9 @@ function onDeviceReady() {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
-    var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
-                                                  [geolocationError],
-                                                  [geolocationOptions]);
+    */
+
+   
 
 
 
