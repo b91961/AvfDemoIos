@@ -54,11 +54,11 @@ AVF 1308
 			<div>
 				<ul data-role="listview" id="natFeat" data-inset="true" data-divider-theme="b">
 					<li data-role="list-divider" >iOS / Android Native Feature Demos</li>
-					<li data-theme="c"><a href="#camPage" id="camera" data-transition="none"><img src="img/camIcon.png" alt="Camera"><h2>Camera</h2></a></li>
-					<li data-theme="c"><a href="#devPage" id="device" data-transition="none"><img src="img/devIcon.png" alt="Device Info"><h2>Device Info</h2></a></li>
-					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+inAppBrowser+api','_blank','location=yes')" id="inapp" data-transition="none"><img src="img/inappIcon.png" alt="In App Browser"><h2>In App Browser</h2></a></li>
-					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+Splashscreen+api','_blank','location=yes')" id="splash" data-transition="none"><img src="img/splashIcon.png" alt="Splashscreen"><h2>Splashscreen</h2></a></li>
-					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+geolocation+api','_blank','location=yes')" id="geo" data-transition="none"><img src="img/geoIcon.png" alt="Geolocation"><h2>Geolocation</h2></a></li>											
+					<li data-theme="c"><a href="#camPage" id="camera" data-transition="none"><img src="img/camIcon.png" alt="Camera"><h2>Camera</h2><p>Working on iOS and Android devices<br>Click here to demo this Native feature</p></a></li>
+					<li data-theme="c"><a href="#geoPage" id="geo" data-transition="none"><img src="img/geoIcon.png" alt="Geolocation"><h2>Geolocation</h2><p>Working on iOS devices<br>Click here to demo this Native feature</p></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+inAppBrowser+api','_blank','location=yes')" id="inapp" data-transition="none"><img src="img/inappIcon.png" alt="In App Browser"><h2>In App Browser</h2><p>Working on iOS and Android devices<br>Click here to demo this Native feature</p></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+Splashscreen+api','_blank','location=yes')" id="splash" data-transition="none"><img src="img/splashIcon.png" alt="Splashscreen"><h2>Splashscreen</h2><p>Working on iOS and Android devices<br>Click here to research this Native feature</p></a></li>
+					<li data-theme="c"><a href="#" onclick="window.open('http://lmgtfy.com/?q=Phonegap+Device+api','_blank','location=yes')" id="device" data-transition="none"><img src="img/devIcon.png" alt="Device Info"><h2>Device Info</h2><p>Not working. Disables the other native features<br>Click here to research this Native feature</p></a></li>											
 				</ul>
 			</div>
 			
@@ -557,7 +557,7 @@ AVF 1308
 
 	</section>
 	
-	<!-- Geolocation Page
+	<!-- Geolocation Page -->
 	<section data-role="page" id="geoPage" data-add-back-btn="true">
 		
 		<div data-role="panel" data-position-fixed="false" data-display="overlay" data-theme="c" id="geopanel">
@@ -578,17 +578,16 @@ AVF 1308
                 <li data-icon="false">AVF1308</li>
 	        </ul>
 		</div>
-		
+		<!-- Header -->
 		<header data-role="header" data-position="fixed" >
 			<div class="headerLogo"><a href="#home"><img src="img/logo.png" alt="AVF Demo App Logo"></a></div>
 			<div class="infobtn"><a href="#geopanel" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a></div>
 		</header>
-			
+		<!-- Page Content -->	
 		<div data-role="content">			
 			<p id="geolocation">Finding geolocation...</p>		
-		</div>
-		
-		
+		</div>		
+		<!-- Footer -->
 		<footer data-role="footer" data-position="fixed" data-id="geo">
 			<div data-role="navbar">
 		    	<ul>
@@ -599,7 +598,7 @@ AVF 1308
 	        </div>
 	    </footer>
 
-	</section> -->
+	</section>
 	
 	
 	<script type="text/javascript" src="cordova.js"></script>
