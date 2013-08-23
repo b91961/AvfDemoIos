@@ -74,7 +74,7 @@ function onDeviceReady() {
 		$.mobile.changePage("#facebookp", {});
 		$('#faceboo').empty();
 		$.ajax({
-			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBAMrhubmElYhlNfEQAIrh12J7Bs0sOWR1a5ZB72gMUCFV4mOj1REcOAvjZAJ0o28R3uvL9y4MoVonPcOZCYh4F6ErJlpJou4FfXPCbqO6WktSoZC53A7yvxQ7dqOnyPbH6A5Eufn5wFJXWCwMwidR58Qt6ZAdLgnDnIuqjZC5M4UsbmZAL1AGTsZD",
+			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBADiklrV8wtZBtd4ZCZCvXjQiZAqRBPhId3ZCZB65QZAMZBOyxI6yxDHxAv4dNvmukHtBoJ08g7mCXztTc7RMZC1RNlCFtUGoNVBDZB48UqOoCKW2iMHGAt3I1ArjTNZAHWtWtIlaeQsyEVr7r8BBD53vg5Afi0PSiOUh0sRLA7T46bQRiFZAXyRZCbdAZD",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(stream) {
@@ -91,11 +91,6 @@ function onDeviceReady() {
 	
 	$('#twitter').on('click', function() {
 		alert("Follow my Tweets!!!");
-/*		setTimeout(function() {
-        	window.location.reload(#);
-        }, 2000); 
-		window.location.reload();
-		return false;*/
 	});
 	
 	// Camera Functions
@@ -134,38 +129,37 @@ function onDeviceReady() {
         sourceType: source });
     }
     
-/*    var dCord = device.cordova;
-		var dPlat = device.platform;
-		var du = device.uuid;
-		var dMod = device.model;
-		var dVer = device.version;
-		$('#devInfo').html( 'Device Cordova: '  + dCord + '<br>' + 
-							'Device Platform: ' + dPlat + '<br>' + 
-							'Device UUID: '     + du + '<br>' + 
-							'Device Model: '    + dMod + '<br>' + 
-							'Device Version: '  + dVer + '<br>' + 
-							'<center><img class = icon src = "img/' + dPlat + '.png"/></center>');
-	});*/
-    
     // Geolocation Function
-/*    function onSuccess(position) {
-        var element = $('#geolocation');
-        element.innerHTML = '<ul data-role="listview" id="geolocfeat" data-inset="true" data-divider-theme="b">' + 
-        					'<li data-role="list-divider" >Geolocation</li>' +
-        					'<li data-theme="c">' + 'Latitude: '           + position.coords.latitude              + '</li>' +
-                            '<li data-theme="c">' + 'Longitude: '          + position.coords.longitude             + '</li>' +
-                            '<li data-theme="c">' + 'Altitude: '           + position.coords.altitude              + '</li>' +
-                            '<li data-theme="c">' + 'Accuracy: '           + position.coords.accuracy              + '</li>' +
-                            '<li data-theme="c">' + 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '</li>' +
-                            '<li data-theme="c">' + 'Heading: '            + position.coords.heading               + '</li>' +
-                            '<li data-theme="c">' + 'Speed: '              + position.coords.speed                 + '</li>' +
-                            '<li data-theme="c">' + 'Timestamp: '          + position.timestamp                    + '</li>' + '</ul>';
-    }
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-    */
+	var geo = function(position){
+		var latitude = position.coords.latitude;
+		var	longitude = position.coords.longitude;
+		$('#geolocation').html('<img class="googApi" src= "http://maps.googleapis.com/maps/api/staticmap?&zoom=14&size=800x600&maptype=roadmap&markers=color:blue%7Clabel:%7C' + latitude + ', '+ longitude + '&sensor=true" />' + '<p>' + 'Latitude = ' + latitude + ',<br> Longitude ='+ longitude + '</p>');
+	 	alert("Here is your location.");  
+	};
+	var onErr = function(error) {
+	    alert('code: '    + error.code    + '\n' +
+	          'message: ' + error.message + '\n');
+	};
+	$('#geo').on('click', function() { 
+		$.mobile.changePage("#geoPage", {});
+		 navigator.geolocation.getCurrentPosition(geo, onErr, {enableHighAccuracy:true});
+	});
+    
+/*    var devCord = device.cordova;
+		var devPlat = device.platform;
+		var devUuid = device.uuid;
+		var devMod = device.model;
+		var devVer = device.version;
+		$('#devInfo').html( 'Device Cordova: '  + devCord + '<br>' + 
+							'Device Platform: ' + devPlat + '<br>' + 
+							'Device UUID: '     + devUuid + '<br>' + 
+							'Device Model: '    + devMod + '<br>' + 
+							'Device Version: '  + devVer + '<br>' + 
+							'<p><img class = icon src = "img/' + devPlat + '.png"/></p>');
+	});*/
+	
+	
+    
 
    
 

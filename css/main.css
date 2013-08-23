@@ -121,3 +121,6 @@
 	max-width: 250px;
 	position: center;
 }
+.googApi {
+	border: 1px solid rgba(63,63,63,0.63);
+}
