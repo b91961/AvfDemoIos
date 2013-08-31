@@ -27,7 +27,7 @@
 /* iPad Verticle */ 
 @media only screen and (min-width: 768px) {
 #displayLinks ul { 
-	width: 50% !important; 
+	width: 50% !important;
 	} 
 }  
 /* iPad Horizontal */ 
@@ -88,7 +88,7 @@
 	background-color: ;
 }
 #textStory {
-	background-color: rgba(76,132,236,0.93);
+	background-color: #55a4da;
 	max-width: 300px;
 	color: white;
 	text-align: center;
