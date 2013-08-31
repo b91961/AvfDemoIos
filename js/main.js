@@ -49,14 +49,12 @@ function onDeviceReady() {
 	
 	$('#instagram').on('click', function() {
 		$.mobile.changePage("#instagramp", {});
-		$('#insta').empty();
 		$.ajax({
 			url: "https://api.instagram.com/v1/users/237665722/media/recent/?access_token=237665722.674061d.6b8bd4ecc4964082827e1b8b9a739e34",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(photos, status) {
-				alert("Enjoy My Photos!!!");
-				console.log(photos.data);
+				$('#insta').empty();
 				$.each(photos.data, function(i, val) {
 					var makeLi = $("<li></li>").appendTo('#insta'),
 							 a = $("<a/>", {"href": val.link, "target": "_blank" }).appendTo(makeLi),
@@ -72,14 +70,12 @@ function onDeviceReady() {
 	
 	$('#fbook').on('click', function() {
 		$.mobile.changePage("#facebookp", {});
-		$('#faceboo').empty();
 		$.ajax({
-			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts&access_token=CAACEdEose0cBADiklrV8wtZBtd4ZCZCvXjQiZAqRBPhId3ZCZB65QZAMZBOyxI6yxDHxAv4dNvmukHtBoJ08g7mCXztTc7RMZC1RNlCFtUGoNVBDZB48UqOoCKW2iMHGAt3I1ArjTNZAHWtWtIlaeQsyEVr7r8BBD53vg5Afi0PSiOUh0sRLA7T46bQRiFZAXyRZCbdAZD",
+			url: "https://graph.facebook.com/100001057172688?fields=devices,feed,photos,posts,statuses&access_token=CAACEdEose0cBAGogMcADVOLpQ9HdJdlSOZBUvhC6Fjj6XTQVH4pgOhp1ltct66LuxMLLrdbXz3koj0IrUVVUjrkyt8bfeQtnLkA7SbFQulzZBlfcQAO3qs5VLEExrd0gI93moj4Ny44ZA3xF6us9q0Iy21JpNii2rN8aWPi2RVJ1nh9VrQWIQZAcxuRSDJYZD",
 			type: "GET",
 			dataType: "JSONP",
 			success: function(stream) {
-				alert("Follow Me!!!");
-				console.log(stream);
+				$('#faceboo').empty();
 				$.each(stream.feed.data, function(i, data) {
 					console.log(data.story);
 						var makeSubLi = $("<div id='posts'><h3 id='textStory'>" + data.story + "</h3><li id='pictureStory'><img src='" + data.picture + "' id='fbPic'/></li></div>");
